@@ -11,3 +11,5 @@ To add this container to the targeted network.
 `docker network connect <targeted container's network name> arbitary-phpmyadmin`
 
 Or you may use docker `docker-compose.yml` networks section.
+
+And on the phpMyadmin login screen. in `server` input field, put the container name. and in the user/pass, use DB user pass.
