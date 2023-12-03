@@ -1,0 +1,17 @@
+version: '3.7'
+services:
+  phpmyadmin:
+    image: 'phpmyadmin/phpmyadmin:latest'
+    container_name: arbitary-phpmyadmin
+    restart: unless-stopped
+    environment:
+      - PMA_ARBITRARY=1
+      - TZ=${TZ:?err}
+      - UPLOAD_LIMIT=900M
+    ports:
+      - '${PORT:?err}:80'
+    networks:
+      - pos-application_pos_network
+networks:
+  pos-application_pos_network:
+    external: true
