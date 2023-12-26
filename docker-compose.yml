@@ -10,8 +10,8 @@ services:
       - UPLOAD_LIMIT=900M
     ports:
       - '${PORT:?err}:80'
-    networks:
-      - pos-application_pos_network
-networks:
-  pos-application_pos_network:
-    external: true
+    # networks:
+    #   - some_database_server_network
+# networks:
+#   some_database_server_network:
+#     external: true

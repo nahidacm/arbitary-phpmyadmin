@@ -8,7 +8,9 @@ Check `.env` file.
 Make sure this PhpMyAdmin and the targeted docker container in very same network.
 
 To add this container to the targeted network.
-`docker network connect <targeted container's network name> arbitary-phpmyadmin`
+```bash
+docker network connect <targeted container's network name> arbitary-phpmyadmin
+```
 
 Or you may use docker `docker-compose.yml` networks section.
 
